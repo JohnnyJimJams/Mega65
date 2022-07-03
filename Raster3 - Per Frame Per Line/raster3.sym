@@ -1,0 +1,8 @@
+.label Palette=$2100
+.label Start=$2015
+.label YRot=$2073
+.label Data=$2073
+.label MainLoop=$2048
+.label Palette_Blue=$2300
+.label Palette_Red=$2100
+.label Palette_Green=$2200
