@@ -18,6 +18,10 @@ Machine Specific Info
 
 * Palette -> 256 colours looked up from RGB values at $d100, $d200 and $d300 (R,G and B are 4 bits wide so 0-15)
 
+* Default memory map has:
+         - Text screen ram $0800-$1000
+         - BASIC Program starting at $2000
+
 
 Kick Assembler Specific Info
 ============================

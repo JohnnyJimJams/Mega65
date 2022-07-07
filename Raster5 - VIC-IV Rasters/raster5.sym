@@ -1,0 +1,11 @@
+.label Palette=$2100
+.label YPos=$2098
+.label SinTable=$2400
+.label Start=$2015
+.label SetupIRQ=$2045
+.label IRQ=$206b
+.label Data=$2098
+.label MainLoop=$2068
+.label Palette_Blue=$2300
+.label Palette_Red=$2100
+.label Palette_Green=$2200
