@@ -1,0 +1,77 @@
+.label ypos=$335d
+.label yposHi=$3a40
+.label Start=$2016
+.label yposLo=$3a00
+.label SinTable3Lo=$3800
+.label MainLoop=$2101
+.label MULTSIGN=$2015
+.label ClearScreenRAM=$2197 {
+  .label job=$21aa {
+  }
+}
+.namespace FLOPPYIO {
+  .label CopySector=$2382
+  .label FetchNext=$2337
+  .label NextDirectoryPage=$2258
+  .label SetLoadAddress=$2227
+  .label DMACopyBuffer=$23a9
+  .label errortext=$221c
+  .label CopyFileToPosition=$230f
+  .label CopyToBuffer=$2371
+  .label PotentialTrack=$2206
+  .label LoopFetchNext=$22c3
+  .label SectorHalf=$2208
+  .label NextEntry=$22a9
+  .label DMACopyToDest=$23a6
+  .label AdvanceSectorPtr=$232b
+  .label Ory=$2235
+  .label NextTrack=$2204
+  .label ReadSector=$233f
+  .label FileFound=$2295
+  .label FetchFile=$22c3
+  .label FileNamePtr=$2200
+  .label DMACopyToDestination=$239a
+  .label PotentialSector=$2207
+  .label FilenameLoop=$2285
+  .label LoopFileRead=$22cf
+  .label Error=$2209
+  .label DMACopyToDestSource=$23a3
+  .label LoopEntry=$2262
+  .label done=$230d
+  .label showerr=$220e
+  .label BufferPtr=$2202
+  .label FloppyError=$22bd
+  .label MBank=$223a
+  .label LoadFile=$2240
+  .label FileNotFoundError=$22bd
+  .label FloppyExit=$22bd
+  .label NextSector=$2205
+  .label ZPBase=$2200
+  .label DMACopyToDestLength=$23a1
+}
+.label CHAR_SRC=$3b00
+.label SetupScreenRAM=$21db {
+  .label job=$21ee {
+  }
+}
+.label waveCounter=$3358
+.label MULTOUT=$d778
+.label wacc=$335b
+.label SetupColorRAM=$21b9 {
+  .label job=$21cc {
+  }
+}
+.label ClearColorRAM=$2175 {
+  .label job=$2188 {
+  }
+}
+.label SCREEN_SRC=$23b8
+.label MULTINA=$d770
+.label MULTINB=$d774
+.label COLOR_SRC=$2b88
+.label SinTable2Lo=$3600
+.label PAL_SRC=$3b00
+.label SinTable1Lo=$3400
+.label SinTable3Hi=$3900
+.label SinTable2Hi=$3700
+.label SinTable1Hi=$3500

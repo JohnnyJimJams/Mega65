@@ -1,0 +1,9 @@
+.label Start=$2016
+.label DMACopyColorRAM=$2034 {
+  .label job=$2047 {
+  }
+}
+.label MULTOUT=$d778
+.label MULTINA=$d770
+.label MULTSIGN=$2015
+.label MULTINB=$d774

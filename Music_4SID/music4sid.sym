@@ -1,0 +1,21 @@
+.label s8580text=$211e
+.label ClrScr=$204b
+.label Start=$2016
+.label s6581text=$211a
+.label SID6581=$210c
+.label textline3=$21c2
+.label textline1=$2122
+.label textline2=$2172
+.label SID8580=$20fe
+.label MULTINA=$d770
+.label MULTSIGN=$2015
+.label MULTINB=$d774
+.label switch=$20e9
+.label WriteText=$2078
+.label loop=$20dc
+.label irq1=$2212 {
+}
+.label scrcol=$221c
+.label irq2=$2246 {
+}
+.label MULTOUT=$d778

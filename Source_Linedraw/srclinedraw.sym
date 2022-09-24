@@ -1,0 +1,92 @@
+.label sx1_hi=$4460
+.label Start=$2016
+.label sx1_lo=$445f
+.label sdy=$4467
+.label sy1=$4461
+.label MainLoop=$20f9
+.label sy2=$4464
+.label sdx_lo=$4465
+.label MULTSIGN=$2015
+.label sdx_hi=$4466
+.namespace FLOPPYIO {
+  .label CopySector=$5682
+  .label FetchNext=$5637
+  .label NextDirectoryPage=$5558
+  .label SetLoadAddress=$5527
+  .label DMACopyBuffer=$56a9
+  .label errortext=$551c
+  .label CopyFileToPosition=$560f
+  .label CopyToBuffer=$5671
+  .label PotentialTrack=$5506
+  .label LoopFetchNext=$55c3
+  .label SectorHalf=$5508
+  .label NextEntry=$55a9
+  .label DMACopyToDest=$56a6
+  .label AdvanceSectorPtr=$562b
+  .label Ory=$5535
+  .label NextTrack=$5504
+  .label ReadSector=$563f
+  .label FileFound=$5595
+  .label FetchFile=$55c3
+  .label FileNamePtr=$5500
+  .label DMACopyToDestination=$569a
+  .label PotentialSector=$5507
+  .label FilenameLoop=$5585
+  .label LoopFileRead=$55cf
+  .label Error=$5509
+  .label DMACopyToDestSource=$56a3
+  .label LoopEntry=$5562
+  .label done=$560d
+  .label showerr=$550e
+  .label BufferPtr=$5502
+  .label FloppyError=$55bd
+  .label MBank=$553a
+  .label LoadFile=$5540
+  .label FileNotFoundError=$55bd
+  .label FloppyExit=$55bd
+  .label NextSector=$5505
+  .label ZPBase=$5500
+  .label DMACopyToDestLength=$56a1
+}
+.label CHAR_SRC=$5700
+.label SetupScreenRAM=$441a {
+  .label job=$442d {
+  }
+}
+.label y1=$445e
+.label MULTOUT=$d778
+.label ClearChars=$443c {
+  .label job=$444f {
+  }
+}
+.label sx2_hi=$4463
+.label colOffsetLo=$4468
+.label sx2_lo=$4462
+.label colOffsetHi=$4490
+.label SetupColorRAM=$43f8 {
+  .label job=$440b {
+  }
+}
+.label SCREEN_SRC=$44b8
+.label MULTINA=$d770
+.label MULTINB=$d774
+.label DrawLine=$4111 {
+  .label xMajor=$427c
+  .label j_length=$4382
+  .label j_source_mem=$4384
+  .label yMajor=$418a
+  .label j_control=$437b
+  .label j_dest_mem=$4387
+  .label job=$436f
+  .label sj_slope=$4377
+  .label j_slope=$4373
+  .label sj_control=$437d
+}
+.label COLOR_SRC=$4c88
+.label PAL_SRC=$5700
+.label DrawLinearBufferToScreen=$438a {
+  .label j_length=$43f0
+  .label j_source_mem=$43f2
+  .label j_dest_mem=$43f5
+  .label job=$43d7
+}

@@ -1,0 +1,17 @@
+.label yOffset=$20b4
+.label Start=$2016
+.label SetupColorRAM=$20b5 {
+  .label job=$20c8 {
+  }
+}
+.label MainLoop=$208f
+.label SCREEN_SRC=$20f9
+.label MULTINA=$d770
+.label MULTSIGN=$2015
+.label MULTINB=$d774
+.label SetupScreenRAM=$20d7 {
+  .label job=$20ea {
+  }
+}
+.label COLOR_SRC=$2991
+.label MULTOUT=$d778

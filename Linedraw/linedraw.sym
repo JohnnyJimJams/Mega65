@@ -1,0 +1,41 @@
+.label Start=$2016
+.label MainLoop=$20a7
+.label MULTSIGN=$2015
+.label SetupScreenRAM=$263b {
+  .label job=$264e {
+  }
+}
+.label x2_hi=$2683
+.label dy=$2687
+.label y1=$2681
+.label y2=$2684
+.label x2_lo=$2682
+.label MULTOUT=$d778
+.label ClearChars=$265d {
+  .label job=$2670 {
+  }
+}
+.label colOffsetLo=$2688
+.label colOffsetHi=$26b0
+.label SetupColorRAM=$2619 {
+  .label job=$262c {
+  }
+}
+.label SCREEN_SRC=$26d8
+.label MULTINA=$d770
+.label MULTINB=$d774
+.label DrawLine=$233d {
+  .label xMajor=$250d
+  .label j_length=$2611
+  .label j_source_col=$2613
+  .label yMajor=$241b
+  .label j_control=$260c
+  .label j_dest_mem=$2616
+  .label job=$2600
+  .label j_slope=$2604
+}
+.label x1_hi=$2680
+.label dx_hi=$2686
+.label COLOR_SRC=$2ea8
+.label dx_lo=$2685
+.label x1_lo=$267f

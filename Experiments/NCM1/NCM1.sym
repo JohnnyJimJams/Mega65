@@ -1,0 +1,121 @@
+.label Layer1XPtrLo=$3d76
+.label Start=$2016
+.label layer0X=$27a8
+.label CHAR_MEM=$4000
+.label MainLoop=$20a3
+.label Layer1XPtrHi=$3d8f
+.label MULTSIGN=$2015
+.label MULTOUT=$d778
+.label PALETTER=$3ce4
+.label Layer0XPtrHi=$3d5d
+.label layer1X=$27a9
+.label SetupColorRAM=$27aa {
+  .label job=$27bd {
+  }
+}
+.label SCREEN_SRC=$27cc
+.label Layer0XPtrLo=$3d44
+.label MULTINA=$d770
+.label MULTINB=$d774
+.label PALETTEB=$3d24
+.label HardScrollLayer0=$2125 {
+  .label c11=$25df {
+  }
+  .label c10=$25c1 {
+  }
+  .label c13=$261b {
+  }
+  .label c12=$25fd {
+  }
+  .label c15=$2657 {
+  }
+  .label c14=$2639 {
+  }
+  .label c17=$2693 {
+  }
+  .label c16=$2675 {
+  }
+  .label c19=$26cf {
+  }
+  .label c18=$26b1 {
+  }
+  .label s11=$25d0 {
+  }
+  .label s10=$25b2 {
+  }
+  .label s13=$260c {
+  }
+  .label s12=$25ee {
+  }
+  .label s15=$2648 {
+  }
+  .label s14=$262a {
+  }
+  .label s17=$2684 {
+  }
+  .label s16=$2666 {
+  }
+  .label s19=$26c0 {
+  }
+  .label s18=$26a2 {
+  }
+  .label c20=$26ed {
+  }
+  .label c00=$2495 {
+  }
+  .label c22=$2729 {
+  }
+  .label c21=$270b {
+  }
+  .label c02=$24d1 {
+  }
+  .label c01=$24b3 {
+  }
+  .label c23=$2747 {
+  }
+  .label c04=$250d {
+  }
+  .label c03=$24ef {
+  }
+  .label c06=$2549 {
+  }
+  .label c05=$252b {
+  }
+  .label c08=$2585 {
+  }
+  .label c07=$2567 {
+  }
+  .label c09=$25a3 {
+  }
+  .label s20=$26de {
+  }
+  .label s00=$2486 {
+  }
+  .label s22=$271a {
+  }
+  .label s21=$26fc {
+  }
+  .label s02=$24c2 {
+  }
+  .label s01=$24a4 {
+  }
+  .label s23=$2738 {
+  }
+  .label s04=$24fe {
+  }
+  .label s03=$24e0 {
+  }
+  .label s06=$253a {
+  }
+  .label s05=$251c {
+  }
+  .label s08=$2576 {
+  }
+  .label s07=$2558 {
+  }
+  .label s09=$2594 {
+  }
+}
+.label COLOR_SRC=$3258
+.label PALETTEG=$3d04
+.label HardScrollLayer1=$2756

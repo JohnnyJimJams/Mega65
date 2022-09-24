@@ -1,0 +1,29 @@
+.label SetupCharRAM=$214b {
+  .label job=$215e {
+  }
+}
+.label Start=$2016
+.label SetupColorRAM=$2107 {
+  .label job=$211a {
+  }
+}
+.label ClearColorRAM=$20c3 {
+  .label job=$20d6 {
+  }
+}
+.label SCREEN_SRC=$216d
+.label MULTINA=$d770
+.label MULTSIGN=$2015
+.label ClearScreenRAM=$20e5 {
+  .label job=$20f8 {
+  }
+}
+.label MULTINB=$d774
+.label CHAR_SRC=$3200
+.label SetupScreenRAM=$2129 {
+  .label job=$213c {
+  }
+}
+.label COLOR_SRC=$293d
+.label PAL_SRC=$fa00
+.label MULTOUT=$d778

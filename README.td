@@ -16,10 +16,11 @@ Machine Specific Info
 
 * Additional 8MB of RAM starting at $8000000, referred to as ’ATTIC RAM’. DMA can access this
 
-* Palette -> 256 colours looked up from RGB values at $d100, $d200 and $d300 (R,G and B are 4 bits wide so 0-15)
+* Palette -> 256 colours looked up from RGB values at $d100, $d200 and $d300 (R,G and B are 4 bits wide so 0-15 on Xemu, but manual says 8 bits wide on hardware.)
 
 * Default memory map has:
          - Text screen ram $0800-$1000
+         - Default chars at $1000-$1800
          - BASIC Program starting at $2000
 
 

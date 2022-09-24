@@ -1,0 +1,19 @@
+.label SetupScreenRAM=$213d {
+  .label job=$2150 {
+  }
+}
+.label Start=$2015
+.label COLOR_SRC=$216f
+.label SetupColorRAM=$211b {
+  .label job=$212e {
+  }
+}
+.label ClearColorRAM=$20d7 {
+  .label job=$20ea {
+  }
+}
+.label SCREEN_SRC=$215f
+.label ClearScreenRAM=$20f9 {
+  .label job=$210c {
+  }
+}

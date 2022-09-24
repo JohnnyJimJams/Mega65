@@ -47,10 +47,29 @@
 		sta $d02f
 }
 
+.macro disableCIAandIRQ() {
+    	lda #$7f
+        sta $DC0D 
+        sta $DD0D 
+
+        lda #$00
+        sta $D01A
+
+        lda #$70
+        sta $D640
+        nop
+}
+
 .macro disableC65ROM() {
-		lda #$70
-		sta $d640
-		eom
+		// lda #$70
+		// sta $d640
+		// eom
+		// lda #$70
+		// sta $D640
+		// nop
+		lda #$02
+		sta $D641
+		clv
 }
 
 .macro mapMemory(source, target) {
@@ -162,10 +181,10 @@
 	.word Length //Size of Copy
 
 	.word Source & $ffff
-	.byte [Source >> 16] + backByte
+	.byte [Source >> 16] + backByte //+$80
 
 	.word Destination & $ffff
-	.byte [[Destination >> 16] & $0f]  + backByte
+	.byte [[Destination >> 16] & $0f]  + backByte//+$80
 	.if(Chain) {
 		.word $0000
 	}
@@ -214,3 +233,106 @@
 		.word $0000
 	}
 }
+
+.label MULTINA = $d770  // 32 bit ($8000d770 in monitor)
+.label MULTINB = $d774  // 32 bit
+.label MULTOUT = $d778  // 64 bit (8 bytes)
+
+// Load Immediate Unsigned into 4 byte MULTINA
+.macro LDIU_MULTINA(fpval)
+{
+    lda #>floor(fpval)
+    sta MULTINA+3
+    lda #<floor(fpval)
+    sta MULTINA+2
+    lda #>floor((fpval - floor(fpval)) * 65536)
+    sta MULTINA+1
+    lda #<floor((fpval - floor(fpval)) * 65536)
+    sta MULTINA+0
+}
+
+// Load Immediate Unsigned into 4 byte MULTINB
+.macro LDIU_MULTINB(fpval)
+{
+    lda #>floor(fpval)
+    sta MULTINB+3
+    lda #<floor(fpval)
+    sta MULTINB+2
+    lda #>floor((fpval - floor(fpval)) * 65536)
+    sta MULTINB+1
+    lda #<floor((fpval - floor(fpval)) * 65536)
+    sta MULTINB+0
+}
+
+// Load pseudo reg Q with 4 byte multiply result
+.macro LDQU_1616()
+{
+	ldq MULTOUT+2
+}
+
+// Load Immediate Unsigned into 4 byte MULTINA
+.macro LDIS_MULTINA(fpval)
+{
+	lda #$00
+	sta MULTSIGN
+    lda #>floor(fpval)
+	bpl !skip+
+!skip:
+    sta MULTINA+3
+    lda #<floor(fpval)
+    sta MULTINA+2
+    lda #>floor((fpval - floor(fpval)) * 65536)
+    sta MULTINA+1
+    lda #<floor((fpval - floor(fpval)) * 65536)
+    sta MULTINA+0
+}
+
+// -------------------------------------------------------------
+//   Core
+// -------------------------------------------------------------
+
+.macro BeginIRQ() {
+                pha
+                tya
+                pha
+                txa
+                pha
+                tza
+                pha
+                inc $d019
+}
+
+.macro EndIRQ() {
+                pla
+                taz
+                pla
+                tax
+                pla
+                tay
+                pla
+                rti
+}
+
+.macro NextIRQ(addr,raster) {
+                lda #raster
+                sta $d012
+                lda #<addr
+                sta $fffe
+                lda #>addr
+                sta $ffff
+                EndIRQ()
+}
+
+// $d064-$d065 : ColorRAM pointer
+// $d06c-$d06e : Sprite pointer adress ($d06e, only lowest 7 bits)
+//               Set bit 7, $d06e = expect 2 bytes per sprite pointer
+// Hot registers: $d011,$d016,$d018,$d031,$dd00
+// Can be disabled by clearing bit 7 in $d05d
+
+// $d076 : Enable native resolution for sprites
+// $d055 : Enable variable height
+// $d056 : variable height value
+// $d057 : set sprite mode
+
+MULTSIGN:
+	.byte 0   // can't do this in an include (at least not before BasicUpstart) 
